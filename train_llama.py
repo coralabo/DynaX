@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 # os.environ['NCCL_P2P_DISABLE'] = '1'
 # os.environ['NCCL_IB_DISABLE'] = '1'
 
-max_seq_len = 8192
+max_seq_len = 4096
 train_batch_size = 2
 eval_batch_size = 2
 epochs = 1

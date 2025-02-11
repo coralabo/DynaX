@@ -32,7 +32,7 @@ if __name__ == "__main__":
     parser.add_argument("--dataset", type=str, default="ptb",
                         choices=["wiki", "c4", "ptb"],
                         help="Dataset to evaluate perplexity on.")
-    parser.add_argument("--max_seq_len", type=int, default=2048,
+    parser.add_argument("--max_seq_len", type=int, default=4096,
                         help="Maximum sequence length.")
 
     args = parser.parse_args()
