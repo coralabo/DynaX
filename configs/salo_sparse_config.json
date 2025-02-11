@@ -1,0 +1,12 @@
+{
+    "is_sparse": true,
+    "is_quant": false,
+    "sparse_methed": "salo",
+    "quant_methed": "1_4_6bit",
+    "m": 64,
+    "n": 16,
+    "threshold_0": 1.0,
+    "threshold_1": 0.1,
+    "threshold_sanger": 1e-4,
+    "topk": 400
+}
