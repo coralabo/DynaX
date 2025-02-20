@@ -40,8 +40,18 @@ DynaX
 # Getting Started
 
 ## Requirements
+python >= 3.10
+torch >= 2.3.0
+cuda >= 12.1
+datasets >= 3.2.0
+transformers >= 4.48.3
+peft >= 0.14.0
 
 ## Datasets Installation
+By loading the dataset online or downloading it through the following link：
+Download the wikitext2 dataset from [here](https://huggingface.co/datasets/mindchain/wikitext2)
+Download the ptb dataset from [here](https://huggingface.co/datasets/ptb-text-only/ptb_text_only)
+Download the c4 dataset from [here]([www.baidu.com](https://huggingface.co/datasets/allenai/c4))
 
 # Experiments
 
