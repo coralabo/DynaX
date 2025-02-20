@@ -57,7 +57,9 @@ Download the c4 dataset from [here](https://huggingface.co/datasets/allenai/c4)
 
 ## Evaluation Models
 We have provided baseline methods and our method's parameter configuration files in the configs folder. For example, to evaluate the LLaMA3-8B model on the wikitext2 dataset using the configuration in configs/xm_sparse_config_json, you need to replace the content of config.json with the content of xm.sparse.config.json. Then, run the following command:
+```
 python eval_llama3.py --model_name_or_path=meta-llama/Meta-Llama-3-8b --dataset=wiki --max_seq_len=4096
+```
 ## Fine-tune Models
 
 # Citation
