@@ -56,12 +56,23 @@ Download the c4 dataset from [here](https://huggingface.co/datasets/allenai/c4)
 # Experiments
 
 ## Evaluation Models
-We have provided baseline methods and our method's parameter configuration files in the configs folder. For example, to evaluate the LLaMA3-8B model on the wikitext2 dataset using the configuration in configs/xm_sparse_config_json, you need to replace the content of config.json with the content of xm.sparse.config.json. Then, run the following command:
+We have provided baseline methods and our method's parameter configuration files in the configs folder. For example, to evaluate the LLaMA3-8B model on the wikitext2 dataset using the configuration in `configs/xm_sparse_config.json`, you need to replace the content of config.json with the content of `xm_sparse_config.json`. Then, run the following command:
 ```
-python eval_llama3.py --model_name_or_path=meta-llama/Meta-Llama-3-8b --dataset=wiki --max_seq_len=4096
+python eval_llama3.py --model_name_or_path=meta-llama/Meta-Llama-3-8b --dataset=wiki --max_seq_len=2048
 ```
 ## Fine-tune Models
-
+After determining whether to use a sparse or dense configuration, you can fine-tune your model. To save GPU memory, we used LoRA for fine-tuning in our experiments, with the specific settings as shown below. For example, to fine-tune LLaMA3-8B on the wikitext2 dataset, you can run the following command: 
+```
+python train_llama.py --dataset=wiki --model_name_or_path=meta-llama/Meta-Llama-3-8b --out_model_path=output
+```
+Subsequently, you can obtain the adapter required for merging after LoRA fine-tuning in the `out_model_path` directory. Running following command: 
+```
+python qlora_merge.py --model_name_or_path=meta-llama/Meta-Llama-3-8b --adapter_name_or_path=output --save_path=newModels
+```
+will then generate the fully fine-tuned model in the `save_path` directory. You can run the following command to conduct the evaluation:
+```
+python eval_llama3.py --model_name_or_path=newModels --dataset=wiki --max_seq_len=2048
+```
 
 # Citation
 Xiao Xiong, Zhaorui Chen, Yue Liang, Minghao Tian, Jiaxing Shang, Jiang Zhong, Dajiang Liu. DynaX: Sparse Attention Acceleration with Dynamic X:M Fine-Grained Structured Pruning. The ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS’25), 2025.
