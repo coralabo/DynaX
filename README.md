@@ -63,7 +63,7 @@ python eval_llama3.py --model_name_or_path=meta-llama/Meta-Llama-3-8b --dataset=
 ## Fine-tune Models
 After determining whether to use a sparse or dense configuration, you can fine-tune your model. To save GPU memory, we used LoRA for fine-tuning in our experiments, with the specific settings as shown below. For example, to fine-tune LLaMA3-8B on the wikitext2 dataset, you can run the following command: 
 ```
-python train_llama.py --dataset=wiki --model_name_or_path=meta-llama/Meta-Llama-3-8b --out_model_path=output
+python train_llama.py --model_name_or_path=meta-llama/Meta-Llama-3-8b --dataset=wiki --out_model_path=output
 ```
 Subsequently, you can obtain the adapter required for merging after LoRA fine-tuning in the `out_model_path` directory. Running following command: 
 ```
