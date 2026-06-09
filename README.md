@@ -1,4 +1,4 @@
-# DynaX (Updating...)
+# DynaX
 Artifact Evaluation Reproduction for "DynaX: Sparse Attention Acceleration with Dynamic X:M Fine-Grained Structured Pruning", ASPLOS 2025
 
 ## Table of contens
