@@ -19,12 +19,12 @@ DynaX
 |  train_llama.py
 |--datasets
 |--hardware
-|   |--execute_utit
+|   |--execute_unit
 |   |   |  repe_array.scala
 |   |   |  repe_row.scala
 |   |   |  repe.scala
 |   |   |  sram.scala
-|   |--predict_utit
+|   |--predict_unit
 |   |   |  prepe_1_2.scala
 |   |   |  prepe_1_4.scala
 |   |   |  psum_softmax.scala
