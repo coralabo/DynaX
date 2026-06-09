@@ -18,6 +18,17 @@ DynaX
 |  train_bloom.py 
 |  train_llama.py
 |--datasets
+|--hardware
+|   |--execute_utit
+|   |   |  repe_array.scala
+|   |   |  repe_row.scala
+|   |   |  repe.scala
+|   |   |  sram.scala
+|   |--predict_utit
+|   |   |  prepe_1_2.scala
+|   |   |  prepe_1_4.scala
+|   |   |  psum_softmax.scala
+|   |   |  topl.scala
 |--newModels     
 |--output
 |--configs
